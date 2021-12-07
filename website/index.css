@@ -1,0 +1,34 @@
+* {
+  text-align: center;
+  margin: 5px;
+}
+input:not([type=submit]) {
+  border: none;
+  margin-right: 5px;
+  border-bottom: 1px black solid;
+}
+input[type=submit] {
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #faa702;
+  border-radius: 25px;
+}
+input[type=submit]:hover {
+  background-color: #c08103;
+}
+#palavra {
+  width: 45%;
+}
+#usuario {
+  width: 50%;
+}
+form {
+  border: 1px black solid;
+  border-radius: 25px;
+
+}
