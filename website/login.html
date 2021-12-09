@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./login.css">
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+  <script defer src="./node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+  <title>Manserv - UT Light</title>
+</head>
+
+<body>
+  <header id="header"></header>
+  <form action="http://localhost:8080/login" method="post">
+    <div class="label"><label for="usuario">Matrícula:</label></div>
+    <div class="input"><i class="fas fa-user"></i><input type="text" name="usuario" id="usuario"><i class="fas fa-check"></i></div>
+    <div class="label"><label for="palavra">Senha:</label></div>
+    <div class="input"><i class="fas fa-lock"></i><input type="password" name="palavra" id="palavra"><i id="mostrar" class="fas fa-eye" onclick="showPass()"></i></div>
+    <div class="submit"><input type="submit" value="Enviar"></div>
+  </form>
+  <footer id="footer"></footer>
+  <script>
+    function showPass() {
+      if (document.getElementById("palavra").getAttribute("type") == "password") {
+        document.getElementById("palavra").setAttribute("type", "text");
+        document.getElementById("mostrar").classList.replace("fa-eye", "fa-eye-slash");
+      } else {
+        document.getElementById("palavra").setAttribute("type", "password");
+        document.getElementById("mostrar").classList.replace("fa-eye-slash", "fa-eye");
+      }
+    }
+  </script>
+  <script src="./index.js"></script>
+</body>
+
+</html>

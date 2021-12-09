@@ -2,11 +2,25 @@
   text-align: center;
   margin: 5px;
 }
-input:not([type=submit]) {
-  border: none;
-  margin-right: 5px;
-  border-bottom: 1px black solid;
+
+form {
+  border: 1px black solid;
+  border-radius: 25px;
 }
+
+.input {
+  border: 1px black solid;
+  border-radius: 25px;
+  width: fit-content;
+  margin: 0px auto 0px auto;
+}
+
+input:not([type=submit]) {
+  display: inline-block;
+  border: none;
+  margin: auto auto;
+}
+
 input[type=submit] {
   margin-top: 10px;
   padding-left: 20px;
@@ -18,17 +32,7 @@ input[type=submit] {
   background-color: #faa702;
   border-radius: 25px;
 }
+
 input[type=submit]:hover {
   background-color: #c08103;
-}
-#palavra {
-  width: 45%;
-}
-#usuario {
-  width: 50%;
-}
-form {
-  border: 1px black solid;
-  border-radius: 25px;
-
 }
