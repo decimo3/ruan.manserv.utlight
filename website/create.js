@@ -1,5 +1,6 @@
+index = 1;
+
 function criarComponente(index) {
-  
   // Cria uma div ṕara agrupar o componente
   divcomp = ["div", "id", ("componente" + index), "class", "componente"];
   criarElemento("create", divcomp);
@@ -23,15 +24,36 @@ function criarComponente(index) {
     datalist = ["datalist", "id", ("listaEletricista" + index.toString() + i.toString())];
     criarElemento(("inputEletricista" + index.toString() + i.toString()), datalist);
     // Elemento do option do datalista
-    option = ["option", "label", "Ruan Faustino Camello Da Silva", "value", "2258038"];
-    criarElemento(("listaEletricista" + index.toString() + i.toString()), option)
-    checkbox = ["input", "type", "checkbox", "value", true, "name", ("persistir" + index.toString() + i.toString())];
+    inserirElementos(index, i);
+    checkbox = ["input", "type", "checkbox", "value", true, "name", ("pEletricista" + index.toString() + i.toString())];
     criarElemento(("divEletricista" + index.toString() + i.toString()), checkbox);
-    checklabel = ["label", "innerHTML", "Persistir mudança", "for", ("persistir" + index.toString() + i.toString())];
+    checklabel = ["label", "innerHTML", "Persistir mudança", "for", ("pEletricista" + index.toString() + i.toString())];
     criarElemento(("divEletricista" + index.toString() + i.toString()), checklabel);
   }
-  
-  
+  divPhone = ["div", "class", "telefone", "id", ("divPhone" + index.toString())];
+  criarElemento(("componente" + index), divPhone);
+  labelPhone = ["label", "innerHTML", "Telefone", "for", ("telefone" + index.toString())];
+  criarElemento(("divPhone" + index.toString()), labelPhone);
+  telefone = ["input", "type", "tel", "pattern", "[0-9]{11}"];
+  criarElemento(("divPhone" + index.toString()), telefone);
+  checkPhone = ["input", "type", "checkbox", "value", true, "name", ("pTelefone" + index.toString())];
+  criarElemento(("divPhone" + index.toString()), checkPhone);
+  labelCheckPhone = ["label", "innerHTML", "Persistir mudanças", "for", ("pTelefone" + index.toString())];
+  criarElemento(("divPhone" + index.toString()), labelCheckPhone);
+  divCarro = ["div", "class", "viatura", "id", ("divCarro" + index.toString())];
+  criarElemento(("componente" + index), divCarro);
+  labelCarro = ["label", "innerHTML", "Viatura", "for", ("viatura" + index.toString())];
+  criarElemento(("divCarro" + index.toString()), labelCarro);
+  inputCarro = ["input", "list", ("listaViatura" + index.toString()), "id", ("inputViatura" + index.toString())];
+  criarElemento(("divCarro" + index.toString()), inputCarro);
+  datalist = ["datalist", "id", ("listaViatura" + index.toString())];
+  criarElemento(("divCarro" + index.toString()), datalist);
+  checkCarro = ["input", "type", "checkbox", "value", true, "name", ("pViatura" + index.toString())];
+  criarElemento(("divCarro" + index.toString()), checkCarro);
+  labelcheckCarro = ["label", "innerHTML", "Persistir mudanças", "for", ("pViatura" + index.toString())];
+  criarElemento(("divCarro" + index.toString()), labelcheckCarro);
+  console.log(index);
+  return index + 1;
 }
 
 function criarElemento(pai, atributes) {
