@@ -59,22 +59,23 @@ function criarComponente(index) {
 function criarElemento(pai, atributes) {
   daddy = document.getElementById(pai);
   elemento = document.createElement(atributes[0]);
-  index = 1;
+  a = 1;
   if (atributes[1] == "innerHTML") {
     elemento.innerHTML = atributes[2];
-    index += 2;
+    a += 2;
   }
   while (index < atributes.length) {
-    elemento.setAttribute(atributes[index], atributes[index + 1]);
-    index += 2;
+    elemento.setAttribute(atributes[a], atributes[a + 1]);
+    a += 2;
   }
   daddy.insertBefore(elemento, pai.nextSibling);
 }
 
-function inserirElementos() {
-  eletricistas = ["option", "innerHTML", "Manserv", "value", "cabecalho"];
-  criarElemento("eletricista", eletricistas);
+function inserirElementos(index, i) {
+  option = ["option", "label", "Ruan Faustino Camello Da Silva", "value", "2258038"];
+  criarElemento(("listaEletricista" + index.toString() + i.toString()), option)
 }
 //inserirElementos();
-
-criarComponente(2);
+function clickCriarComponente() {
+  index = criarComponente(index);
+}
